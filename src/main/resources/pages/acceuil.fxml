@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE"
+         xmlns="http://javafx.com/javafx/17"
+         xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="com.example.gestion_des_presences_des_profs.controllers.AcceuilController"
+         stylesheets="@../styles/acceuil.css"
+         prefWidth="940" prefHeight="600">
+
+    <!-- Onglets de navigation -->
+    <tabs>
+        <!-- Onglet "Gestion des Utilisateurs" -->
+        <Tab text="Gestion des Utilisateurs" fx:id="usersTab">
+            <VBox spacing="10">
+                <Label text="Page de gestion des utilisateurs." />
+            </VBox>
+        </Tab>
+
+        <!-- Onglet "Gestion des Cours" -->
+        <Tab text="Gestion des Cours" fx:id="coursesTab">
+            <VBox spacing="10">
+                <Label text="Page de gestion des cours." />
+            </VBox>
+        </Tab>
+        <!-- Onglet "Gestion des salles" -->
+        <Tab text="Gestion des Salles" fx:id="salleTab">
+            <VBox spacing="10">
+                <Label text="Page de gestion des salles." />
+            </VBox>
+        </Tab>
+        <!-- Onglet "Gestion des Émargements" -->
+        <Tab text="Gestion des Émargements" fx:id="attendanceTab">
+            <VBox spacing="10">
+                <Label text="Page de gestion des émargements." />
+            </VBox>
+        </Tab>
+
+        <!-- Onglet "Génération de Rapports et Statistiques" -->
+        <Tab text="Rapports" fx:id="reportsTab">
+            <VBox spacing="10">
+                <Label text="Page des rapports et statistiques." />
+            </VBox>
+        </Tab>
+        <!-- Onglet "Génération des Statistiques" -->
+        <Tab text="Statistiques" fx:id="statsTab">
+            <VBox spacing="10">
+                <Label text="Page des statistiques." />
+            </VBox>
+        </Tab>
+
+        <!-- Onglet "Notifications" -->
+        <Tab text="Notifications" fx:id="notificationsTab">
+            <VBox spacing="10">
+                <Label text="Page des notifications." />
+            </VBox>
+        </Tab>
+    </tabs>
+</TabPane>

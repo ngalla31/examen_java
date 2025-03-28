@@ -1,0 +1,48 @@
+/* Style général de l'application */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #F4F4F4; /* Couleur de fond générale */
+}
+
+/* Barre de navigation */
+.tab-pane .tab-header-area {
+    -fx-background-color: #1E3A5F; /* Bleu foncé */
+    -fx-padding: 5px;
+}
+
+/* Style des onglets non sélectionnés */
+.tab-pane .tab {
+    -fx-background-color: #34495E; /* Gris foncé */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px 5px 0 0;
+}
+
+/* Effet au survol */
+.tab-pane .tab:hover {
+    -fx-background-color: #1ABC9C; /* Vert clair */
+    -fx-text-fill: black;
+}
+
+/* Style des onglets sélectionnés */
+.tab-pane .tab:selected {
+    -fx-background-color: #ECF0F1; /* Blanc cassé */
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+/* Contenu des onglets */
+.anchor-pane {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+}
+
+/* Style des labels */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #2C3E50;
+    -fx-font-weight: bold;
+}

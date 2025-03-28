@@ -1,0 +1,86 @@
+/* Style global pour les graphiques */
+.chart {
+    -fx-background-color: transparent;
+    -fx-border-color: #333;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+/* Style spécifique au BarChart */
+.bar-chart .chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.bar-chart .axis-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.bar-chart .chart-legend {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333;
+}
+
+.bar-chart .series {
+    -fx-stroke: #0077cc;
+    -fx-fill: #66b3ff;
+}
+
+.bar-chart .data {
+    -fx-background-color: #0077cc;
+    -fx-border-color: #005ea6;
+    -fx-border-width: 1px;
+}
+
+/* Style spécifique au LineChart */
+.line-chart .chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.line-chart .axis-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.line-chart .chart-legend {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333;
+}
+
+.line-chart .series {
+    -fx-stroke: #ff6600;
+    -fx-fill: transparent;
+    -fx-stroke-width: 2px;
+}
+
+.line-chart .data {
+    -fx-background-color: transparent;
+    -fx-stroke: #ff6600;
+    -fx-stroke-width: 2px;
+    -fx-radius: 5px;
+}
+
+/* Style spécifique au PieChart */
+.pie-chart .chart-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.pie-chart .chart-legend {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333;
+}
+
+/* Étiquettes */
+.label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-margin: 10px;
+}

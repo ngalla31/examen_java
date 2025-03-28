@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" stylesheets="@../styles/cours.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestion_des_presences_des_profs.controllers.CoursController">
+
+    <!-- Formulaire d'ajout/édition de cours -->
+    <VBox spacing="5">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+
+        <Label styleClass="title" text="Ajouter/Modifier un cours" />
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" />
+                <ColumnConstraints hgrow="ALWAYS" />
+            </columnConstraints>
+
+            <Label text="Nom :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="nomField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Description :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="descriptionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Heure de début :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="heureDebutField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Heure de fin :" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="heureFinField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Salle :" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <ComboBox fx:id="salleComboBox" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <!-- Salle ComboBox items will be dynamically added in the controller -->
+            </ComboBox>
+            <Label text="Professeur :" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <ComboBox fx:id="profComboBox" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                <!-- Les utilisateurs seront ajoutés dynamiquement dans le contrôleur -->
+            </ComboBox>
+
+            <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+
+        <!-- Buttons -->
+        <HBox spacing="10">
+            <Button fx:id="ajouterButton" onAction="#ajouterCours" styleClass="button-primary" text="Ajouter" />
+            <Button fx:id="annulerButton" onAction="#annulerFormulaire" styleClass="button-secondary" text="Annuler" />
+        </HBox>
+    </VBox>
+
+    <!-- Tableau des cours -->
+    <TableView fx:id="tableView" onMouseClicked="#getData" onSort="#getData" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="nomColumn" text="Nom" />
+            <TableColumn fx:id="descriptionColumn" text="Description" />
+            <TableColumn fx:id="heureDebutColumn" text="Heure de début" />
+            <TableColumn fx:id="heureFinColumn" text="Heure de fin" />
+            <TableColumn fx:id="salleColumn" text="Salle" />
+
+            <!-- Nouvelle colonne Professeur -->
+            <TableColumn fx:id="professeurColumn" text="Professeur"/>
+
+        </columns>
+    </TableView>
+
+    <!-- Boutons d'action -->
+    <HBox spacing="10">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <Button fx:id="modifierButton" onAction="#modifierCours" styleClass="button-primary" text="Modifier" />
+        <Button fx:id="supprimerButton" onAction="#supprimerCours" styleClass="button-danger" text="Supprimer" />
+    </HBox>
+</VBox>

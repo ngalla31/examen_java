@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="460.0" prefWidth="625.0" stylesheets="@../styles/emergements.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestion_des_presences_des_profs.controllers.EmargementsController">
+   <children>
+      <Label layoutX="208.0" layoutY="23.0" text="Formulaire d'emargement">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="157.0" text="Date">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="5.0" layoutY="94.0" text="Professeurs">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="13.0" layoutY="42.0" text="Cours">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboCours" layoutX="85.0" layoutY="37.0" prefHeight="42.0" prefWidth="141.0" />
+      <ComboBox fx:id="comboProf" layoutX="93.0" layoutY="92.0" prefWidth="150.0" />
+      <DatePicker fx:id="date" layoutX="93.0" layoutY="150.0" prefHeight="25.0" prefWidth="150.0" />
+      <Button fx:id="btValider" layoutX="11.0" layoutY="216.0" mnemonicParsing="false" onAction="#validarEmargement" prefHeight="25.0" prefWidth="73.0" text="Valider" />
+      <Button fx:id="btAnnuler" layoutX="153.0" layoutY="218.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="73.0" text="Annuler" />
+      <TableView fx:id="table" layoutX="71.0" layoutY="259.0" prefHeight="200.0" prefWidth="531.0">
+        <columns>
+          <TableColumn fx:id="cId" prefWidth="101.99999761581421" text="ID" />
+          <TableColumn fx:id="cCours" prefWidth="91.33332061767578" text="COURS" />
+            <TableColumn fx:id="cProf" prefWidth="185.3332977294922" text="PROFESSEURS" />
+            <TableColumn fx:id="cDate" prefWidth="151.33334350585938" text="DATE" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

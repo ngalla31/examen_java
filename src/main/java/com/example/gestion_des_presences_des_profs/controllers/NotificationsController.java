@@ -1,0 +1,5 @@
+package com.example.gestion_des_presences_des_profs.controllers;
+
+public class NotificationsController {
+    
+}

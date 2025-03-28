@@ -1,0 +1,50 @@
+/* Style de la page des cours */
+
+/* Titres */
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Les boutons */
+.button-primary {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+}
+
+.button-secondary {
+    -fx-background-color: #e7e7e7;
+    -fx-text-fill: #333;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+}
+
+.button-danger {
+    -fx-background-color: #d32f2f;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+}
+
+/* Table view */
+.table-view {
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1;
+    -fx-font-size: 14px;
+}
+
+/* HBox et VBox */
+.hbox, .vbox {
+    padding: 10px;
+}
+
+/* GridPane */
+.grid-pane {
+    margin-top: 10px;
+}
