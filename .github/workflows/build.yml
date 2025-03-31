@@ -1,0 +1,36 @@
+name: Automatisation du projet
+
+on:
+  push:
+    branches:
+      - Oumar_Mbaye_emargement
+  pull_request:
+    branches:
+      - Oumar_Mbaye_emargement
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Vérifier le code
+      - name: Cloner le code depuis GitHub
+        uses: actions/checkout@v3
+
+      # 2️⃣ Installer Maven
+      - name: Installer Maven
+        run: sudo apt update && sudo apt install -y maven
+
+      # 3️⃣ Installer les dépendances Maven
+      - name: Installer les dépendances Maven
+        run: mvn clean install
+
+      # 4️⃣ Construire une image Docker
+      - name: Construire une image Docker
+        run: |
+          docker build -t mon-projet:latest .
+
+      # 5️⃣ Configurer un Webhook avec Jenkins
+      - name: Envoyer une requête au Webhook Jenkins
+        run: |
+          curl -X POST http://jenkins.local:8080/github-webhook/
