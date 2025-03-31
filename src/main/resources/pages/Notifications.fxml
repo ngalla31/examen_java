@@ -30,7 +30,7 @@
                         <PropertyValueFactory property="destinataire"/>
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn fx:id="dateEnvoiColumn" text="Date d'Envoi" prefWidth="180.0">
+                <TableColumn fx:id="dateEnvoiColumn" text="Date de  l'Envoi" prefWidth="180.0">
                     <cellValueFactory>
                         <PropertyValueFactory property="dateEnvoi"/>
                     </cellValueFactory>
