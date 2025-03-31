@@ -1,0 +1,58 @@
+/* Style général de la fenêtre */
+AnchorPane {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Style du titre */
+Label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* TableView - Style général */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-radius: 10px;
+    -fx-padding: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 0, 5);
+}
+
+/* En-têtes des colonnes */
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px;
+}
+
+/* Colonnes et cellules */
+.table-cell {
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+}
+
+/* Effet au survol des lignes */
+.table-row-cell:hover {
+    -fx-background-color: #ecf0f1;
+    -fx-cursor: hand;
+}
+
+/* Style des boutons */
+Button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 16px;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 5, 0, 0, 2);
+}
+
+Button:hover {
+    -fx-background-color: #2980b9;
+}

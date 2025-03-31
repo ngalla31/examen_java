@@ -135,6 +135,7 @@ public class AcceuilController {
             if (notificationsTab.isSelected()) {
                 System.out.println("Onglet 'Notifications' sélectionné.");
                 // Charger la page ou le contenu des notifications
+                loadNotifsPage();
             }
         });
     }
@@ -151,6 +152,7 @@ public class AcceuilController {
     private void loadEmargementsPage() {loadPage("/pages/emargements.fxml");}
     private void loadRapportsPage() {loadPage("/pages/rapports.fxml");}
     private void loadStatsPage() {loadPage("/pages/statistiques.fxml");}
+    private void loadNotifsPage() {loadPage("/pages/notifications.fxml");}
     // Méthode pour charger une page FXML
     public void loadPage(String fxmlFile) {
         try {
